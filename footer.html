@@ -1,0 +1,262 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+
+var calculateTotal = function () {
+    let unit_price = {
+        ham: 174,
+        steak: 422,
+        chicken: 350,
+        salmon: 280,
+        mackerel: 355,
+        noodle: 418,
+        noodle100: 131,
+        bread: 186,
+        rice: 160,
+        rice100: 131,
+        lettuce: 369,
+        carrot: 52,
+        potato100:81,
+        apple: 50,
+        strawberries: 150,
+        strawberries100: 33,
+        grappe: 168,
+        grappe100: 67,
+        banana100:89,
+        contrex: 69,
+        beer: 70,
+        camembert: 180,
+        whitecheese: 134,
+        running: 400,
+        fitness: 100,
+        cycling: 400,
+        gym: 300,
+
+    };
+    let item_price = {}
+
+    item_price.ham = ($("#qty_ham").val() * unit_price.ham)
+    $("#price_ham").val(item_price.ham);
+
+    item_price.steak = ($("#qty_steak").val() * unit_price.steak)
+    $("#price_steak").val(item_price.steak);
+
+    item_price.chicken = ($("#qty_chicken").val() * unit_price.chicken)
+    $("#price_chicken").val(item_price.chicken);
+
+    item_price.salmon = ($("#qty_salmon").val() * unit_price.salmon)
+    $("#price_salmon").val(item_price.salmon);
+
+    item_price.mackerel = ($("#qty_mackerel").val() * unit_price.mackerel)
+    $("#price_mackerel").val(item_price.mackerel);
+
+    item_price.bread = ($("#qty_bread").val() * unit_price.bread)
+    $("#price_bread").val(item_price.bread);
+
+    item_price.noodle = ($("#qty_noodle").val() * unit_price.noodle)
+    $("#price_noodle").val(item_price.noodle);
+
+    item_price.noodle100 = ($("#qty_noodle100").val() * unit_price.noodle100)
+    $("#price_noodle100").val(item_price.noodle100);
+
+    item_price.rice = ($("#qty_rice").val() * unit_price.rice)
+    $("#price_rice").val(item_price.rice);
+
+    item_price.rice100 = ($("#qty_rice100").val() * unit_price.rice100)
+    $("#price_rice100").val(item_price.rice100);
+
+    item_price.lettuce = ($("#qty_lettuce").val() * unit_price.lettuce)
+    $("#price_lettuce").val(item_price.lettuce);
+
+    item_price.carrot = ($("#qty_carrot").val() * unit_price.carrot)
+    $("#price_carrot").val(item_price.carrot);
+
+    item_price.potato100 = ($("#qty_potato100").val() * unit_price.potato100)
+    $("#price_potato100").val(item_price.potato100);
+
+    item_price.apple = ($("#qty_apple").val() * unit_price.apple)
+    $("#price_apple").val(item_price.apple);
+
+    item_price.strawberries = ($("#qty_strawberries").val() * unit_price.strawberries)
+    $("#price_strawberries").val(item_price.strawberries);
+
+    item_price.strawberries100 = ($("#qty_strawberries100").val() * unit_price.strawberries100)
+    $("#price_strawberries100").val(item_price.strawberries100);
+
+    item_price.grappe = ($("#qty_grappe").val() * unit_price.grappe)
+    $("#price_grappe").val(item_price.grappe);
+
+    item_price.grappe100 = ($("#qty_grappe100").val() * unit_price.grappe100)
+    $("#price_grappe100").val(item_price.grappe100);
+
+    item_price.banana100 = ($("#qty_banana100").val() * unit_price.banana100)
+    $("#price_banana100").val(item_price.banana100);
+
+    item_price.contrex = ($("#qty_contrex").val() * unit_price.contrex)
+    $("#price_contrex").val(item_price.contrex);
+
+    item_price.beer = ($("#qty_beer").val() * unit_price.beer)
+    $("#price_beer").val(item_price.beer);
+
+    item_price.camembert = ($("#qty_camembert").val() * unit_price.camembert)
+    $("#price_camembert").val(item_price.camembert);
+
+    item_price.whitecheese = ($("#qty_whitecheese").val() * unit_price.whitecheese)
+    $("#price_whitecheese").val(item_price.whitecheese);
+
+    item_price.running = ($("#qty_running").val() * unit_price.running)
+    $("#price_running").val(item_price.running);
+
+    item_price.fitness = ($("#qty_fitness").val() * unit_price.fitness)
+    $("#price_fitness").val(item_price.fitness);
+
+    item_price.cycling = ($("#qty_cycling").val() * unit_price.cycling)
+    $("#price_cycling").val(item_price.cycling);
+
+    item_price.gym = ($("#qty_gym").val() * unit_price.gym)
+    $("#price_gym").val(item_price.gym);
+
+
+    if (typeof $("#custId").val() !== 'undefined') {
+        let total = item_price.bread
+            + item_price.beer
+            + item_price.camembert + item_price.whitecheese
+            + item_price.noodle100 + item_price.rice100
+            + item_price.potato100 + item_price.apple + item_price.banana100 + item_price.strawberries100 + item_price.grappe100
+            - item_price.gym
+            ;
+        $("#total_value").text(total);
+        if (total > 2200) {
+            $("#total_td").css("background-color", "#cf9491");
+        } else {
+            $("#total_td").css("background-color", "#f2f2f2");
+        }
+    } else {
+        let total = item_price.ham + item_price.steak + item_price.chicken + item_price.salmon + item_price.mackerel
+            + item_price.bread + item_price.noodle + item_price.rice
+            + item_price.lettuce + item_price.carrot + item_price.apple + item_price.strawberries + item_price.grappe + item_price.banana100
+            + item_price.contrex
+            - item_price.running - item_price.fitness - item_price.cycling
+            ;
+
+
+        $("#total_value").text(total);
+        if (total > 2400) {
+            $("#total_td").css("background-color", "#cf9491");
+        } else {
+            $("#total_td").css("background-color", "#f2f2f2");
+        }
+    }
+};
+
+  var calculateAMR = function () {
+        console.log("vv");
+
+        let gender = $(":radio[name=gender]:checked").val();
+        let age = $("#age").val();
+        let height = $("#height").val();
+        let height2 = $("#height2").val();
+        let weight = $("#weight").val();
+        let activity = $(":radio[name=activity]:checked").val();
+        console.log("activity" + activity);
+        let amr = 0;
+
+
+        const sedentaryAct = 1.2;
+        const lightAct = 1.375;
+        const moderateAct = 1.55;
+        const veryAct = 1.9;
+
+        const wInit = 655;
+        const wWeight = 4.35;
+        const wHeight = 4.7;
+        const wAge = 4.7;
+        const mInit = 66.47;
+        const mWeight = 6.24;
+        const mHeight = 12.7;
+        const mAge = 6.755;
+
+
+
+        if (gender === 'male' && activity === 'sedentary') {
+            amr = sedentaryAct * (mInit + mWeight * weight + mHeight * (12 * parseInt(height) + parseInt(height2)) - mAge * age);
+        } else if (gender === 'female' && activity === 'sedentary') {
+            amr = sedentaryAct * (wInit + wWeight * weight + wHeight * (12 * parseInt(height) + parseInt(height2)) - wAge * age);
+        } else if (gender === 'male' && activity === 'light') {
+            amr = lightAct * (mInit + mWeight * weight + mHeight * (12 * parseInt(height) + parseInt(height2)) - mAge * age);
+        } else if (gender === 'female' && activity === 'light') {
+            amr = lightAct * (wInit + wWeight * weight + wHeight * (12 * parseInt(height) + parseInt(height2)) - wAge * age);
+        } else if (gender === 'male' && activity === 'moderate') {
+            amr = moderateAct * (mInit + mWeight * weight + mHeight * (12 * parseInt(height) + parseInt(height2)) - mAge * age);
+        } else if (gender === 'female' && activity === 'moderate') {
+            amr = moderateAct * (wInit + wWeight * weight + wHeight * (12 * parseInt(height) + parseInt(height2)) - wAge * age);
+        } else if (gender === 'male' && activity === 'active') {
+            amr = 1.725 * (mInit + mWeight * weight + mHeight * (12 * parseInt(height) + parseInt(height2)) - mAge * age);
+        } else if (gender === 'female' && activity === 'active') {
+            amr = 1.725 * (wInit + wWeight * weight + wHeight * (12 * parseInt(height) + parseInt(height2)) - wAge * age);
+        } else if (gender === 'male' && activity === 'very') {
+            amr = veryAct * (mInit + mWeight * weight + mHeight * (12 * parseInt(height) + parseInt(height2)) - mAge * age);
+        } else if (gender === 'female' && activity === 'very') {
+            amr = veryAct * (wInit + wWeight * weight + wHeight * (12 * parseInt(height) + parseInt(height2)) - wAge * age);
+        }
+
+        $("#total_value").text(Math.round(amr));
+    };
+
+    var calculateMetricAMR = function () {
+        console.log("vv");
+
+        let gender = $(":radio[name=genderM]:checked").val();
+        let age = $("#ageM").val();
+        let height = $("#heightM").val();
+        let weight = $("#weightM").val();
+        let activity = $(":radio[name=activityM]:checked").val();
+        let amr = 0;
+
+
+        const sedentaryAct = 1.2;
+        const lightAct = 1.375;
+        const moderateAct = 1.55;
+        const veryAct = 1.9;
+
+        const wInit = 655;
+        const wWeight = 9.563;
+        const wHeight = 1.85;
+        const wAge = 4.676;
+        const mInit = 66.47;
+        const mWeight = 13.75;
+        const mHeight = 5.003;
+        const mAge = 6.755;
+
+
+
+        if (gender === 'male' && activity === 'sedentary') {
+            amr = sedentaryAct * (mInit + mWeight * weight + mHeight * height - mAge * age);
+        } else if (gender === 'female' && activity === 'sedentary') {
+            amr = sedentaryAct * (wInit + wWeight * weight + wHeight * height - wAge * age);
+        } else if (gender === 'male' && activity === 'light') {
+            amr = lightAct * (mInit + mWeight * weight + mHeight * height - mAge * age);
+        } else if (gender === 'female' && activity === 'light') {
+            amr = lightAct * (wInit + wWeight * weight + wHeight * height - wAge * age);
+        } else if (gender === 'male' && activity === 'moderate') {
+            amr = moderateAct * (mInit + mWeight * weight + mHeight * height - mAge * age);
+        } else if (gender === 'female' && activity === 'moderate') {
+            amr = moderateAct * (wInit + wWeight * weight + wHeight * height - wAge * age);
+        } else if (gender === 'male' && activity === 'active') {
+            amr = 1.725 * (mInit + mWeight * weight + mHeight * height - mAge * age);
+        } else if (gender === 'female' && activity === 'active') {
+            amr = 1.725 * (wInit + wWeight * weight + wHeight * height - wAge * age);
+        } else if (gender === 'male' && activity === 'very') {
+            amr = veryAct * (mInit + mWeight * weight + mHeight * height - mAge * age);
+        } else if (gender === 'female' && activity === 'very') {
+            amr = veryAct * (wInit + wWeight * weight + wHeight * height - wAge * age);
+        }
+
+        $("#total_valueM").text(Math.round(amr));
+    };
+_strk.push(['Page.didMount', calculateTotal]);
+_strk.push(['Page.didMount', calculateAMR ]);
+_strk.push(['Page.didMount', calculateMetricAMR ]);
+
+</script>

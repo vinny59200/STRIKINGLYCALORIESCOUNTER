@@ -1,0 +1,205 @@
+<table id="customers">
+    <tr>
+        <th colspan="2">
+            Item
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Calories
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            Beer (25cl)
+        </td>
+        <td>
+            <input type="number" value="0" class="qty" id="qty_beer" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_beer" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            2
+        </td>
+        <td>
+            Camembert (1/4)
+        </td>
+        <td>
+            <input type="number" value="0" class="qty" id="qty_camembert" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_camembert" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            3
+        </td>
+        <td>
+            White cheese (100gr)
+        </td>
+        <td>
+            <input type="number" value="0" class="qty" id="qty_whitecheese" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_whitecheese" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            4
+        </td>
+        <td>
+            Bread (70 gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_bread" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_bread" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5
+        </td>
+        <td>
+            Rice (100 gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_rice100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_rice100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            6
+        </td>
+        <td>
+            Noodle (100 gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_noodle100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_noodle100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            7
+        </td>
+        <td>
+            Potatoes (100gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_potato100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_potato100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            8
+        </td>
+        <td>
+            Apple (1)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_apple" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_apple" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            9
+        </td>
+        <td>
+            Strawberries (100gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_strawberries100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_strawberries100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            10
+        </td>
+        <td>
+            Grappe (100gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_grappe100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_grappe100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            11
+        </td>
+        <td>
+            Banana (100gr)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_banana100" onclick="calculateTotal()" />
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_banana100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            12
+        </td>
+        <td>
+            Gym (30min)
+        </td>
+        <td>
+            <input type="number" class="qty" value="0" id="qty_gym" onclick="calculateTotal()" />
+        </td>
+        <td>
+           - <input type="number" readonly value="0" id="price_gym" />
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" >
+            Total
+            <input type="hidden" id="custId" name="custId" value="kim"> 
+        </td>
+
+        <td colspan="2" id="total_td">
+            <span id="total_value">0</span>
+        </td>
+    </tr>
+
+</table>

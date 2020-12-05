@@ -11,4 +11,4 @@ Put the content of the footer.html file in Settings->Show Advanced->Custom Code-
 Put the content of the header.html file in Settings->Show Advanced->Custom Code->Header code, save and publish.
 
 ## PAGE
-Put the content of the page.html file in your page. Choose a section of type 'App Store & HTML'. Click on that section. Choose the first item 'HTML'. And paste the content from page.html in the appearing textarea. Save, publish.
+Put the content of the html files (vv-calories/kim-calories/amr) in your page. Choose a section of type 'App Store & HTML'. Click on that section. Choose the first item 'HTML'. And paste the content from page.html in the appearing textarea. Save, publish.

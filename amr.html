@@ -1,0 +1,124 @@
+<table id="customers">
+    <tr>
+        <th colspan="3">
+            AMR calculator
+        </th>
+        <th colspan="1">
+            English units
+        </th>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="radio" name="gender" value="male"> Male
+        </td>
+        <td colspan="2">
+            <input type="radio" name="gender" value="female"> Female
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            Age: <input type="number" value="35" id="age" min="0" max="86" />
+        </td>
+        <td colspan="2">
+            Height: <input type="number" value="5" id="height" min="3" max="8" />Feet
+            <input type="number" value="9" id="height2" min="5" max="11" />Inches
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            Weight: <input type="number" value="198" id="weight" min="0" max="300" />pounds
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="radio" name="activity" value="sedentary"> Sedentary
+        </td>
+        <td>
+            <input type="radio" name="activity" value="light"> Light activity
+        </td>
+        <td>
+            <input type="radio" name="activity" value="moderate"> Moderate activity
+        </td>
+        <td>
+            <input type="radio" name="activity" value="very"> Very active
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="button" value="Calculate AMR" onclick="calculateAMR()">
+        </td>
+        <td colspan="2">
+            <b>AMR = </b><span id="total_value" style="color:#4CAF50;font-weight:bold;font-size:50px">0</span>
+            <b>Calories</b>
+        </td>
+    </tr>
+
+</table>
+
+<br><br><br><br>
+
+<table id="customers">
+    <tr>
+        <th colspan="3">
+            AMR calculator
+        </th>
+        <th colspan="1">
+            Metric units
+        </th>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="radio" name="genderM" value="male"> Male
+        </td>
+        <td colspan="2">
+            <input type="radio" name="genderM" value="female"> Female
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            Age: <input type="number" value="37" id="ageM" min="0" max="86" />
+        </td>
+        <td colspan="2">
+            Height: <input type="number" value="181" id="heightM" min="136" max="224" />cm
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            Weight: <input type="number" value="88" id="weightM" min="0" max="136" />Kg
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="radio" name="activityM" value="sedentary"> Sedentary
+        </td>
+        <td>
+            <input type="radio" name="activityM" value="light"> Light activity
+        </td>
+        <td>
+            <input type="radio" name="activityM" value="moderate"> Moderate activity
+        </td>
+        <td>
+            <input type="radio" name="activityM" value="very"> Very active
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <input type="button" value="Calculate AMR" onclick="calculateMetricAMR()">
+        </td>
+        <td colspan="2">
+            <b>AMR = </b><span id="total_valueM" style="color:#4CAF50;font-weight:bold;font-size:50px">0</span>
+            <b>Calories</b>
+        </td>
+    </tr>
+
+</table>
