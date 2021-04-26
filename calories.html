@@ -1,0 +1,521 @@
+<html>
+<head>
+<style> 
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: solid;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button {
+width:50px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,#customers  th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+
+    function calculateTotal  () {
+        let unit_price = {
+            ham: 174,
+            steak: 422,
+            chicken: 350,
+            salmon: 280,
+            mackerel: 355,
+            cucumberRoll: 22,
+            salmonRoll: 39,
+            californiaRoll: 47,
+            salmonSushi: 58,
+            noodle: 418,
+            noodle100: 131,
+            bread: 186,
+            rice: 160,
+            rice100: 131,
+            lettuce: 369,
+            carrot: 52,
+            potato100: 81,
+            apple: 50,
+            strawberries: 150,
+            strawberries100: 33,
+            grappe: 168,
+            grappe100: 67,
+            banana100: 89,
+            contrex: 69,
+            beer: 70,
+            camembert: 180,
+            whitecheese: 134,
+            running: 400,
+            fitness: 100,
+            cycling: 400,
+            gym: 300,
+
+        };
+        let item_price = {}
+
+        item_price.ham = ($("#qty_ham").val() * unit_price.ham)
+        $("#price_ham").val(item_price.ham);
+
+        item_price.steak = ($("#qty_steak").val() * unit_price.steak)
+        $("#price_steak").val(item_price.steak);
+
+        item_price.chicken = ($("#qty_chicken").val() * unit_price.chicken)
+        $("#price_chicken").val(item_price.chicken);
+
+        item_price.salmon = ($("#qty_salmon").val() * unit_price.salmon)
+        $("#price_salmon").val(item_price.salmon);
+
+        item_price.mackerel = ($("#qty_mackerel").val() * unit_price.mackerel)
+        $("#price_mackerel").val(item_price.mackerel);
+
+        item_price.cucumberRoll = ($("#qty_cucumberRoll").val() * unit_price.cucumberRoll)
+        $("#price_cucumberRoll").val(item_price.cucumberRoll);
+
+        item_price.salmonRoll = ($("#qty_salmonRoll").val() * unit_price.salmonRoll)
+        $("#price_salmonRoll").val(item_price.salmonRoll);
+
+        item_price.californiaRoll = ($("#qty_californiaRoll").val() * unit_price.californiaRoll)
+        $("#price_californiaRoll").val(item_price.californiaRoll);
+
+        item_price.salmonSushi = ($("#qty_salmonSushi").val() * unit_price.salmonSushi)
+        $("#price_salmonSushi").val(item_price.salmonSushi);
+
+        item_price.bread = ($("#qty_bread").val() * unit_price.bread)
+        $("#price_bread").val(item_price.bread);
+
+        item_price.noodle = ($("#qty_noodle").val() * unit_price.noodle)
+        $("#price_noodle").val(item_price.noodle);
+
+       
+        item_price.rice = ($("#qty_rice").val() * unit_price.rice)
+        $("#price_rice").val(item_price.rice);
+
+        item_price.lettuce = ($("#qty_lettuce").val() * unit_price.lettuce)
+        $("#price_lettuce").val(item_price.lettuce);
+
+        item_price.carrot = ($("#qty_carrot").val() * unit_price.carrot)
+        $("#price_carrot").val(item_price.carrot);
+
+      
+        item_price.apple = ($("#qty_apple").val() * unit_price.apple)
+        $("#price_apple").val(item_price.apple);
+
+        item_price.strawberries = ($("#qty_strawberries").val() * unit_price.strawberries)
+        $("#price_strawberries").val(item_price.strawberries);
+
+     
+        item_price.grappe = ($("#qty_grappe").val() * unit_price.grappe)
+        $("#price_grappe").val(item_price.grappe);
+		
+		item_price.banana100 = ($("#qty_banana100").val() * unit_price.banana100)
+        $("#price_banana100").val(item_price.banana100);
+
+     
+        item_price.contrex = ($("#qty_contrex").val() * unit_price.contrex)
+        $("#price_contrex").val(item_price.contrex);
+
+      
+     
+       
+		let total = item_price.ham + item_price.steak + item_price.chicken + item_price.salmon + item_price.mackerel
+			+ item_price.cucumberRoll + item_price.salmonRoll + item_price.californiaRoll + item_price.salmonSushi
+			+ item_price.bread + item_price.noodle + item_price.rice
+			+ item_price.lettuce + item_price.carrot + item_price.apple + item_price.strawberries + item_price.grappe + item_price.banana100
+			+ item_price.contrex
+
+			;
+console.log(total)
+		
+		console.log(item_price.cucumberRoll)
+		console.log(item_price.salmonRoll )
+		console.log( item_price.californiaRoll)
+		console.log(item_price.salmonSushi)
+		 $("#total_value").text(total);
+		if (total > 2400) {
+			$("#total_td").css("background-color", "#cf9491");
+		} else {
+			$("#total_td").css("background-color", "#f2f2f2");
+		}
+        
+    };
+
+ 
+$(function() {
+
+  $(".numbers-row").append('<span class="inc button" onclick="calculateTotal()">+</span><span class="dec button" onclick="calculateTotal()">-</span>');
+
+  $(".button").on("click", function() {
+
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+
+    if ($button.text() == "+") {
+  	  var newVal = parseFloat(oldValue) + 1;
+  	} else {
+	   // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+	    } else {
+        newVal = 0;
+      }
+	  }
+
+    $button.parent().find("input").val(newVal);
+
+  });
+
+});
+  
+
+</script>
+</head>
+<body>
+<table id="customers">
+    <tr>
+        <th colspan="2">
+            Item
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Calories
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            Ham
+        </td>
+        <td>
+             <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0"  class="qty" id="qty_ham" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_ham" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            2
+        </td>
+        <td>
+            Steak
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_steak" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_steak" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            3
+        </td>
+        <td>
+            Chicken
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_chicken" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_chicken" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            4
+        </td>
+        <td>
+            Salmon
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_salmon" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_salmon" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            5
+        </td>
+        <td>
+            Mackerel
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_mackerel" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_mackerel" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            6a
+        </td>
+        <td>
+            Cucumber roll
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_cucumberRoll" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_cucumberRoll" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            6b
+        </td>
+        <td>
+            Salmon roll
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" value="0" class="qty" id="qty_salmonRoll" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_salmonRoll" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            6c
+        </td>
+        <td>
+            California roll
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_californiaRoll" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_californiaRoll" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            6d
+        </td>
+        <td>
+            Salmon nigiri
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_salmonSushi" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_salmonSushi" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            7
+        </td>
+        <td>
+            Bread
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_bread" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_bread" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            8
+        </td>
+        <td>
+            Noodle
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" value="0" class="qty" id="qty_noodle" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_noodle" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            9
+        </td>
+        <td>
+            Rice
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" value="0" class="qty" id="qty_rice" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_rice" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            10
+        </td>
+        <td>
+            Lettuce
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_lettuce" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_lettuce" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            11
+        </td>
+        <td>
+            Carrot
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_carrot" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_carrot" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            12
+        </td>
+        <td>
+            Apple
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_apple" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_apple" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            13
+        </td>
+        <td>
+            Strawberries
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_strawberries" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_strawberries" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            14
+        </td>
+        <td>
+            Grape
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_grappe" onclick="calculateTotal()" /></div></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_grappe" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            15
+        </td>
+        <td>
+            Banana
+        </td>
+        <td>
+            <div class="numbers-row" onclick="calculateTotal()"><input type="number" class="qty" value="0" id="qty_banana100" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_banana100" />
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            16
+        </td>
+        <td>
+            Bio drink
+        </td>
+        <td>
+           <div class="numbers-row" onclick="calculateTotal()"> <input type="number" class="qty" value="0" id="qty_contrex" onclick="calculateTotal()" /></div>
+        </td>
+        <td>
+            <input type="number" readonly value="0" id="price_contrex" />
+        </td>
+    </tr>
+
+
+    <tr>
+        <td colspan="2">
+            Total
+        </td>
+
+        <td colspan="2" id="total_td">
+            <span id="total_value">0</span>
+        </td>
+    </tr>
+
+</table>
+
+</body></html>
